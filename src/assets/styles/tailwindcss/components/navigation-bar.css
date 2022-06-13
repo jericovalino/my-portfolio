@@ -1,7 +1,10 @@
 .navigation-bar {
   @apply fixed bottom-4 left-4 right-4 w-[calc(100%-32px)] h-[50px];
   @apply rounded-lg bg-gray-800 text-white p-1 border border-gray-900 overflow-hidden;
-  @apply text-xs font-medium;
+  @apply text-xs font-medium transition-all;
+  &.hide-bottom {
+    @apply bottom-0 translate-y-full;
+  }
   &::after {
     content: "";
     @apply absolute w-full h-[6px] bg-red-400 left-0 bottom-0;
