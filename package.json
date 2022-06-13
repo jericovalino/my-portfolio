@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "postcss-import": "^14.1.0",
+    "solid-app-router": "^0.3.3",
     "solid-icons": "^0.4.13",
     "solid-js": "^1.4.2"
   }
