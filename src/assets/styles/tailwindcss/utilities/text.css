@@ -1,0 +1,55 @@
+.text-primary-gradient {
+  background: linear-gradient(
+    90deg,
+    #3ed3da 0%,
+    #6a67e6 51.31%,
+    #64548c 98.92%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* &.animate-gradient-on-hover:hover {
+    animation: text-gradient-aimate 1000ms alternate infinite;
+  } */
+}
+
+/* @keyframes text-gradient-aimate {
+  0% {
+    background: linear-gradient(
+      90deg,
+      #3ed3da 0%,
+      #6a67e6 51.31%,
+      #64548c 98.92%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(
+      90deg,
+      #64548c 0%,
+      #3ed3da 51.31%,
+      #6a67e6 98.92%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(
+      90deg,
+      #6a67e6 0%,
+      #64548c 51.31%,
+      #3ed3da 98.92%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+} */

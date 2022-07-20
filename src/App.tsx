@@ -16,7 +16,9 @@ const Navigation: Component<{ hideBottom: Boolean }> = (props: {
 }) => {
   return (
     <nav
-      class={`navigation-bar ${(props?.hideBottom ?? false) && "hide-bottom"}`}
+      class={`bot-navigation-bar ${
+        (props?.hideBottom ?? false) && "hide-bottom"
+      }`}
     >
       <ul class="grid grid-cols-4">
         <NavLink class="flex flex-col items-center justify-center" href="/">
@@ -68,7 +70,9 @@ const App: Component = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Navigation hideBottom={!showBottomNav()} />
+        <aside class="sm:hidden">
+          <Navigation hideBottom={!showBottomNav()} />
+        </aside>
       </div>
     </Router>
   );

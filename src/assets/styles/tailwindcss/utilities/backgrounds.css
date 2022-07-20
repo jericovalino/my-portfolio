@@ -1,0 +1,11 @@
+.bg-image-pattern {
+  background-image: url("../images/backgrounds/patterns.svg");
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(133, 134, 238, 0.8) 0%,
+    rgba(225, 134, 240, 0.752457) 53.2%
+  );
+}

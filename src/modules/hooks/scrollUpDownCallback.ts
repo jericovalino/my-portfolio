@@ -7,8 +7,13 @@ interface Options {
 }
 
 export const useScrollUpDownCallback = (options: Options) => {
-  let scrollYPosRef: any = 0;
-  const onScroll = (e: any) => {
+  let scrollYPosRef: number = 0;
+  const onScroll = (
+    e: UIEvent & {
+      currentTarget: HTMLElement;
+      target: Element;
+    }
+  ) => {
     const { scrollTop = 0, scrollHeight = 0, clientHeight = 0 } = e?.target;
     const scrollableHeight = scrollHeight - clientHeight;
     if (scrollTop < scrollYPosRef && (options?.listenOnScrollUp ?? true)) {
@@ -34,10 +39,10 @@ export const useScrollUpDownCallback = (options: Options) => {
     return null;
   };
 
-  const register = () => ({
+  const register = {
     onScroll,
     // add more features/listeners here
-  });
+  };
 
   return { register };
 };
