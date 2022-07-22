@@ -1,0 +1,18 @@
+.hand {
+  @apply absolute bottom-0 -right-36 sm:-right-48 transform -rotate-[25deg] transition-transform duration-200 delay-200;
+  &.hide {
+    @apply translate-x-80 translate-y-60;
+  }
+  &.wave {
+    animation: wave-animate 200ms ease-out alternate 6 200ms;
+  }
+
+  @keyframes wave-animate {
+    from {
+      transform: rotate(-25deg) translateX(0);
+    }
+    to {
+      transform: rotate(-10deg) translateX(2.5rem);
+    }
+  }
+}

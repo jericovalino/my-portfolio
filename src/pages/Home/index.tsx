@@ -1,10 +1,14 @@
 import cn from "classnames";
+import { createSignal } from "solid-js";
 import { Component } from "solid-js/types";
 
 import WhiteLogo from "../../assets/images/logos/logo_white.svg";
 import HandHello from "../../assets/images/others/hand_hello.png";
 
 const Home: Component = () => {
+  const [getShowHand, setShowHand] = createSignal(false);
+  const [getWaveHand, setWaveHand] = createSignal(false);
+
   return (
     <div>
       <div class="h-[750px] overflow-hidden bg-primary-gradient relative text-white">
@@ -23,6 +27,7 @@ const Home: Component = () => {
                 "bg-white h-[40px] px-3 grid place-items-center rounded-tl-full",
                 "rounded-tr-full rounded-br-full text-gray-800 shadow-md"
               )}
+              onClick={() => setShowHand((prev) => !prev)}
             >
               Say Hi.
             </button>
@@ -43,7 +48,20 @@ const Home: Component = () => {
           </div>
           <img
             src={HandHello}
-            class="absolute bottom-0 -right-48 transform -rotate-[25deg]"
+            class={cn(
+              "hand",
+              !getShowHand() ? "hide" : "",
+              getWaveHand() ? "wave" : ""
+            )}
+            onTransitionEnd={(e) => {
+              const isShowing = !e.target.classList.contains("hide");
+              if (!isShowing) return;
+              setWaveHand(true);
+            }}
+            onAnimationEnd={() => {
+              setWaveHand(false);
+              setShowHand(false);
+            }}
           />
         </div>
       </div>
