@@ -9,7 +9,7 @@ const Home: Component = () => {
     <div>
       <div class="h-[750px] overflow-hidden bg-primary-gradient relative text-white">
         <div class="bg-image-pattern w-full h-full bg-no-repeat bg-cover">
-          <div class="container mx-auto py-5 px-2 flex justify-between">
+          <div class="container mx-auto py-5 px-4 flex justify-between">
             <img src={WhiteLogo} class="h-[45px]" />
             <nav class="hidden sm:block">
               <ul class="top-navigation-bar">
@@ -27,9 +27,11 @@ const Home: Component = () => {
               Say Hi.
             </button>
           </div>
-          <div class="mt-36 container mx-auto px-2">
-            <h3 class="font-medium text-2xl">Jerico Valino</h3>
-            <h1 class="font-medium text-6xl">Awesome every pixel.</h1>
+          <div class="mt-20 sm:mt-36 container mx-auto px-4">
+            <h3 class="font-medium text-xl sm:text-2xl">Jerico Valino</h3>
+            <h1 class="font-medium text-5xl sm:text-6xl">
+              Awesome every pixel.
+            </h1>
             <p class="mt-4 leading-loose max-w-lg text-justify">
               I’m a web developer from Batangas Philippines. I love building
               reactive and responsive website using the latest technologies
